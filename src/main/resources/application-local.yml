@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: appy
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis:
+  #SQL 쿼리가 정의된 XML 파일의 위치
+  #classpath: src/main/resources
+  #mapper in src/main/resources/mapper/**/*.xml
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.example.appy.domain
+  configuration:
+    #DB의 snake_case 컬럼명을 Java의 camelCase 필드명으로 자동 변환
+    map-underscore-to-camel-case: true
