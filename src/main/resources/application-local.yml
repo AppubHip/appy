@@ -17,7 +17,7 @@ mybatis:
   #classpath: src/main/resources
   #mapper in src/main/resources/mapper/**/*.xml
   mapper-locations: classpath:mapper/**/*.xml
-  type-aliases-package: com.example.appy.domain
+  type-aliases-package: com.example.appy.vo
   configuration:
     #DB의 snake_case 컬럼명을 Java의 camelCase 필드명으로 자동 변환
     map-underscore-to-camel-case: true
